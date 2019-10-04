@@ -2025,8 +2025,8 @@ class Subscription(StripeObject):
                  enable_incomplete_payments=True,  # legacy support
                  payment_behavior='allow_incomplete',
                  trial_period_days=None, **kwargs):
-        if kwargs:
-            raise UserError(400, 'Unexpected ' + ', '.join(kwargs.keys()))
+        # if kwargs:
+            # raise UserError(400, 'Unexpected ' + ', '.join(kwargs.keys()))
 
         tax_percent = try_convert_to_float(tax_percent)
         enable_incomplete_payments = try_convert_to_bool(
